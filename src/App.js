@@ -1,4 +1,5 @@
-import ExpenseItem from "./components/ExpenseItem";
+import Expenses from "./components/Expenses";
+import './index.css'
 
 function App() {
   const expenses = [
@@ -27,14 +28,7 @@ function App() {
   return (
     <div>
       <h2>Let's Get Started</h2>
-      {expenses && expenses.length ? (
-        expenses.map(item => {
-          return (
-            <ExpenseItem expenses={item}/>
-          )
-        })
-      ) : null}
-      
+      <Expenses items={expenses}/>
     </div>
   );
 }
